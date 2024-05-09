@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "EpidemiX",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "EpidemiX::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-EpidemiX-Debug-fd62657bfd4e080be536.json",
+					"name" : "EpidemiX",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/EpidemiX/EpidemiX/cmake-build-debug",
+		"source" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/EpidemiX/EpidemiX"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
