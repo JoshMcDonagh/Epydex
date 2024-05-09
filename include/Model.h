@@ -10,7 +10,8 @@
 #include "ModelResults.h"
 
 ModelResults run(
-    int numOfAgents,
+    int numOfCores,
+    bool areTempFilesCleanedUp,
     Clock clock,
     Agents agents,
     ModelResults results);

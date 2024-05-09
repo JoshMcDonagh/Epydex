@@ -8,7 +8,8 @@
 
 
 class Agents {
-
+public:
+    void runTick();
 };
 
 

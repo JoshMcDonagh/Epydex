@@ -11,10 +11,13 @@ class Clock {
 public:
     Clock(int totalNumOfTicksToRun, int numOfWarmUpTicks);
     [[nodiscard]] int getTotalNumberOfTicksToRun() const;
+    [[nodiscard]] bool isFinished() const;
+    void tick();
 
 private:
     int totalNumOfTicksToRun_m;
     int numOfWarmUpTicks_m;
+    int currentTick_m;
 };
 
 

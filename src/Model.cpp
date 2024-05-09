@@ -5,11 +5,16 @@
 #include "../include/Model.h"
 
 ModelResults run(
-    int const numOfAgents,
+    int const numOfCores,
+    bool const areTempFilesCleanedUp,
     Clock const clock,
+    Agents agents,
     ModelResults const results) {
 
 
+    while (!clock.isFinished()) {
+        agents.runTick();
+    }
 
     return results;
 }
