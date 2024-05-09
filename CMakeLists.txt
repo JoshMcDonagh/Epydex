@@ -3,4 +3,4 @@ project(EpidemiX)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_library(EpidemiX SHARED library.cpp)
+add_library(EpidemiX SHARED src/library.cpp)
