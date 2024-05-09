@@ -1,3 +1,3 @@
-C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/Nexus/Nexus/cmake-build-debug/CMakeFiles/EpidemiX.dir
-C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/Nexus/Nexus/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/Nexus/Nexus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug/CMakeFiles/PyNex.dir
+C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug/CMakeFiles/rebuild_cache.dir

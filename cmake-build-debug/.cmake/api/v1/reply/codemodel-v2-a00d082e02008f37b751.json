@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "EpidemiX",
+					"name" : "PyNex",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "EpidemiX::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-EpidemiX-Debug-fd62657bfd4e080be536.json",
-					"name" : "EpidemiX",
+					"id" : "PyNex::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PyNex-Debug-e555a3e9e5463243361f.json",
+					"name" : "PyNex",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/Nexus/Nexus/cmake-build-debug",
-		"source" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/Nexus/Nexus"
+		"build" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug",
+		"source" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex"
 	},
 	"version" : 
 	{
