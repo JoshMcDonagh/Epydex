@@ -3,3 +3,11 @@
 //
 
 #include "../include/Agents.h"
+
+Agents::Agents() {
+
+}
+
+void Agents::runTick() {
+
+}

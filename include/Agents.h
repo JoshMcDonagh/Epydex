@@ -4,11 +4,14 @@
 
 #ifndef AGENTS_H
 #define AGENTS_H
-
+#include <string>
+#include <variant>
 
 
 class Agents {
+    using VariantType = std::variant<int, double, std::string, bool>;
 public:
+    Agents();
     void runTick();
 };
 

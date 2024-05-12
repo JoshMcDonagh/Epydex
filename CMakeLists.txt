@@ -11,4 +11,10 @@ add_library(PyNex SHARED
         src/agents.cpp
         include/agents.h
         src/ModelResults.cpp
-        include/ModelResults.h)
+        include/ModelResults.h
+        src/AgentAttributes.cpp
+        include/AgentAttributes.h
+        src/Property.cpp
+        include/Property.h
+        src/Event.cpp
+        include/Event.h)

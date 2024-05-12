@@ -64,7 +64,10 @@
 				1,
 				2,
 				4,
-				6
+				6,
+				8,
+				10,
+				12
 			]
 		}
 	],
@@ -100,7 +103,10 @@
 				0,
 				3,
 				5,
-				7
+				7,
+				9,
+				11,
+				13
 			]
 		},
 		{
@@ -110,7 +116,10 @@
 				1,
 				2,
 				4,
-				6
+				6,
+				8,
+				10,
+				12
 			]
 		}
 	],
@@ -118,46 +127,79 @@
 	[
 		{
 			"backtrace" : 1,
-			"path" : "include/model.h",
+			"path" : "include/Model.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/model.cpp",
+			"path" : "src/Model.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/clock.cpp",
+			"path" : "src/Clock.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/clock.h",
+			"path" : "include/Clock.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/agents.cpp",
+			"path" : "src/Agents.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/agents.h",
+			"path" : "include/Agents.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/model_results.cpp",
+			"path" : "src/ModelResults.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/model_results.h",
+			"path" : "include/ModelResults.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/AgentAttributes.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/AgentAttributes.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Property.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/Property.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Event.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/Event.h",
 			"sourceGroupIndex" : 0
 		}
 	],
