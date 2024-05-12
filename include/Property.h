@@ -19,6 +19,7 @@ public:
     std::string getName();
     T getStartingValue();
     std::function<void(std::string, T, Agents&)> getUpdateFunction();
+    [[nodiscard]] const std::type_info& getType() const;
 
 private:
     std::string name_m;

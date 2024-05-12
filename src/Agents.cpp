@@ -4,9 +4,14 @@
 
 #include "../include/Agents.h"
 
-Agents::Agents() {
+Agents::Agents(const AgentAttributes& agentAttributes) : agentAttributes_m(agentAttributes){
 
 }
+
+AgentAttributes Agents::getAgentAttributes() {
+    return agentAttributes_m;
+}
+
 
 void Agents::runTick() {
 

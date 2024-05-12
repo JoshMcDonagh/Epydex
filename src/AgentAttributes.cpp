@@ -5,13 +5,12 @@
 #include "../include/AgentAttributes.h"
 
 
-AgentAttributes::AgentAttributes(Agents const agents) {
-    agents_m = agents;
+AgentAttributes::AgentAttributes(Agents const agents) : agents_m(agents) {
     propertyCount_m = 0;
     eventCount_m = 0;
 }
 
-void AgentAttributes::addProperty(Property& property) {
+void AgentAttributes::addProperty(Property<std::variant<int, double, std::string, bool>>& property) {
     properties_m.push_back(property);
     propertyIndexes_m[property.getName()] = propertyCount_m;
     propertyCount_m += 1;
@@ -23,7 +22,7 @@ void AgentAttributes::addEvent(Event& event) {
     eventCount_m += 1;
 }
 
-Property AgentAttributes::getPropertyByIndex(int const index) {
+Property<std::variant<int, double, std::string, bool>> AgentAttributes::getPropertyByIndex(int const index) {
     return properties_m[index];
 }
 
@@ -31,7 +30,7 @@ Event AgentAttributes::getEventByIndex(int const index) {
     return events_m[index];
 }
 
-Property AgentAttributes::getPropertyByName(const std::string& name) {
+Property<std::variant<int, double, std::string, bool>> AgentAttributes::getPropertyByName(const std::string& name) {
     return properties_m[propertyIndexes_m[name]];
 }
 

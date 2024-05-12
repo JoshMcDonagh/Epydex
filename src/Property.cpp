@@ -29,3 +29,7 @@ std::function<void(std::string, T, Agents &)> Property<T>::getUpdateFunction() {
     return updateFunction_m;
 }
 
+template<typename T>
+const std::type_info& Property<T>::getType() const {
+    return typeid(startingValue_m);
+}

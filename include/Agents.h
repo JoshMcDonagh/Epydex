@@ -7,12 +7,17 @@
 #include <string>
 #include <variant>
 
+#include "AgentAttributes.h"
+
 
 class Agents {
-    using VariantType = std::variant<int, double, std::string, bool>;
 public:
-    Agents();
+    explicit Agents(const AgentAttributes& agentAttributes);
+    AgentAttributes getAgentAttributes();
     void runTick();
+
+private:
+    AgentAttributes agentAttributes_m;
 };
 
 
