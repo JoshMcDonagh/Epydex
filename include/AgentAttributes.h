@@ -21,6 +21,8 @@ public:
     Event getEventByIndex(int index);
     Property getPropertyByName(const std::string& name);
     Event getEventByName(const std::string& name);
+    [[nodiscard]] int getNumOfProperties() const;
+    [[nodiscard]] int getNumOfEvents() const;
 
 private:
     Agents agents_m;

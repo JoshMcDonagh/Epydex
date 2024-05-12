@@ -39,6 +39,11 @@ Event AgentAttributes::getEventByName(const std::string& name) {
     return events_m[eventIndexes_m[name]];
 }
 
+int AgentAttributes::getNumOfProperties() const {
+    return propertyCount_m;
+}
 
-
+int AgentAttributes::getNumOfEvents() const {
+    return eventCount_m;
+}
 
