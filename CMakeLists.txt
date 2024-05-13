@@ -17,4 +17,6 @@ add_library(PyNex SHARED
         src/Property.cpp
         include/Property.h
         src/Event.cpp
-        include/Event.h)
+        include/Event.h
+        src/Agent.cpp
+        include/Agent.h)

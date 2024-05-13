@@ -5,7 +5,7 @@
 #include "../include/AgentAttributes.h"
 
 
-AgentAttributes::AgentAttributes(Agents const agents) : agents_m(agents) {
+AgentAttributes::AgentAttributes(Agents const &agents) {
     propertyCount_m = 0;
     eventCount_m = 0;
 }
@@ -46,3 +46,12 @@ int AgentAttributes::getNumOfEvents() const {
     return eventCount_m;
 }
 
+void AgentAttributes::runTick(Agent &agent, Agents &agents) {
+    // Run ticks for the stored properties
+    for (int i = 0; i < propertyCount_m; i++)
+        properties_m[i].runTick(agent, agents);
+
+    // Run the ticks for the stored events
+    for (int i = 0; i < eventCount_m; i++)
+        events_m[i].runTick(agent, agents);
+}

@@ -8,20 +8,17 @@
 #include <memory>
 
 #include "AgentAttributes.h"
-
+#include "Agent.h"
 
 class Agents {
 public:
-    explicit Agents(int numOfAgents, std::unique_ptr<std::string[]> agentNames, const AgentAttributes& agentAttributes);
-    AgentAttributes getAgentAttributes();
+    Agents(int numOfAgents, std::map<std::string, int> agentIndexes, std::unique_ptr<Agent[]> agentArray);
     void runTick();
 
 private:
-    int numOfAgents_m;
-    AgentAttributes agentAttributes_m;
+    int numOfAgents_m{};
     std::map<std::string, int> agentIndexes_m;
-    int propertiesTableSize_m;
-    std::unique_ptr<std::vector<std::variant<int, double, std::string, bool>>[]> propertiesTable_m;
+    std::unique_ptr<Agent[]> agentArray_m;
 };
 
 

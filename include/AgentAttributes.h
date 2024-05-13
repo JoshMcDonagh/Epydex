@@ -14,7 +14,7 @@
 
 class AgentAttributes {
 public:
-    explicit AgentAttributes(Agents agents);
+    explicit AgentAttributes(const Agents &agents);
     void addProperty(Property<std::variant<int, double, std::string, bool>>& property);
     void addEvent(Event& event);
     Property<std::variant<int, double, std::string, bool>> getPropertyByIndex(int index);
@@ -23,9 +23,9 @@ public:
     Event getEventByName(const std::string& name);
     [[nodiscard]] int getNumOfProperties() const;
     [[nodiscard]] int getNumOfEvents() const;
+    void runTick(Agent& agent, Agents& agents);
 
 private:
-    Agents agents_m;
     int propertyCount_m;
     int eventCount_m;
     std::vector<Property<std::variant<int, double, std::string, bool>>> properties_m;

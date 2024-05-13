@@ -8,9 +8,9 @@
 
 template<typename T>
 Property<T>::Property(std::string name, T startingValue,
-        std::function<void(std::string, T, Agents&)> updateFunction) {
+        std::function<T(T, Agent&, Agents&)> updateFunction) {
     name_m = std::move(name);
-    startingValue_m = std::move(startingValue);
+    value_m = std::move(startingValue);
     updateFunction_m = std::move(updateFunction);
 }
 
@@ -20,16 +20,12 @@ std::string Property<T>::getName() {
 }
 
 template<typename T>
-T Property<T>::getStartingValue() {
-    return startingValue_m;
-}
-
-template<typename T>
-std::function<void(std::string, T, Agents &)> Property<T>::getUpdateFunction() {
-    return updateFunction_m;
-}
-
-template<typename T>
 const std::type_info& Property<T>::getType() const {
-    return typeid(startingValue_m);
+    return typeid(value_m);
 }
+
+template<typename T>
+void Property<T>::runTick(Agent& agent, Agents& agents) {
+    value_m = updateFunction_m(value_m, agent, agents);
+}
+

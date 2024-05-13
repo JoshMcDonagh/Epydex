@@ -5,6 +5,7 @@
 #ifndef PROPERTY_H
 #define PROPERTY_H
 #include <functional>
+#include <optional>
 #include <string>
 #include <variant>
 
@@ -15,16 +16,15 @@ template<typename T>
 class Property {
 public:
     explicit Property(std::string name, T startingValue,
-        std::function<void(std::string, T, Agents&)> updateFunction);
+        std::function<T(T, Agent&, Agents&)> updateFunction);
     std::string getName();
-    T getStartingValue();
-    std::function<void(std::string, T, Agents&)> getUpdateFunction();
     [[nodiscard]] const std::type_info& getType() const;
+    void runTick(Agent& agent, Agents& agents);
 
 private:
     std::string name_m;
-    std::variant<int, double, std::string, bool> startingValue_m;
-    std::function<void(std::string, T, Agents&)> updateFunction_m;
+    std::variant<int, double, std::string, bool> value_m;
+    std::function<T(T, Agent&, Agents&)> updateFunction_m;
 };
 
 
