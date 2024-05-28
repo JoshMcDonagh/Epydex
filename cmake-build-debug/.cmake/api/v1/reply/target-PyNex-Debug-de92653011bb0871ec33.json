@@ -68,7 +68,9 @@
 				8,
 				10,
 				12,
-				14
+				14,
+				16,
+				18
 			]
 		}
 	],
@@ -108,7 +110,9 @@
 				9,
 				11,
 				13,
-				15
+				15,
+				17,
+				19
 			]
 		},
 		{
@@ -122,7 +126,9 @@
 				8,
 				10,
 				12,
-				14
+				14,
+				16,
+				18
 			]
 		}
 	],
@@ -213,7 +219,29 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/Agent.h",
+			"path" : "include/Agent.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/AgentResults.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/AgentResults.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/MemoryMappedTable.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/MemoryMappedTable.h",
 			"sourceGroupIndex" : 0
 		}
 	],

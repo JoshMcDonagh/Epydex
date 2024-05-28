@@ -25,7 +25,7 @@ rule CXX_COMPILER__PyNex_unscanned_Debug
 # Rule for linking CXX shared library.
 
 rule CXX_SHARED_LIBRARY_LINKER__PyNex_Debug
-  command = C:\windows\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
 
@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"C:\Users\jmmar\Desktop\Laptop Files\Work\University of Manchester\PhD Computer Science\Code\PyNex\PyNex" -B"C:\Users\jmmar\Desktop\Laptop Files\Work\University of Manchester\PhD Computer Science\Code\PyNex\PyNex\cmake-build-debug"
+  command = "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"E:\Home Desktop Files\Work\University of Manchester\PhD Work\Gitlab Work\Epydex\Epydex" -B"E:\Home Desktop Files\Work\University of Manchester\PhD Work\Gitlab Work\Epydex\Epydex\cmake-build-debug"
   description = Re-running CMake...
   generator = 1
 

@@ -17,6 +17,8 @@ public:
     explicit AgentAttributes(const Agents &agents);
     void addProperty(Property<std::variant<int, double, std::string, bool>>& property);
     void addEvent(Event& event);
+    std::vector<Property<std::variant<int, double, std::string, bool>>> getProperties();
+    std::vector<Event> getEvents();
     Property<std::variant<int, double, std::string, bool>> getPropertyByIndex(int index);
     Event getEventByIndex(int index);
     Property<std::variant<int, double, std::string, bool>> getPropertyByName(const std::string& name);

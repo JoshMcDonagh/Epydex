@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "PyNex::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PyNex-Debug-332dae00ada036ea0397.json",
+					"jsonFile" : "target-PyNex-Debug-de92653011bb0871ec33.json",
 					"name" : "PyNex",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug",
-		"source" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex"
+		"build" : "E:/Home Desktop Files/Work/University of Manchester/PhD Work/Gitlab Work/Epydex/Epydex/cmake-build-debug",
+		"source" : "E:/Home Desktop Files/Work/University of Manchester/PhD Work/Gitlab Work/Epydex/Epydex"
 	},
 	"version" : 
 	{

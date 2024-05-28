@@ -6,9 +6,11 @@
 
 #include "../include/Event.h"
 
-Event::Event(std::string name, std::function<bool(Agent&, Agents&)> triggerFunction,
-        std::function<void(Agent&, Agents&)> updateFunction) {
+Event::Event(std::string name, bool isRecorded, std::function<bool(Agent&, Agents&)> triggerFunction,
+             std::function<void(Agent&, Agents&)> updateFunction) {
     name_m = std::move(name);
+    isRecorded_m = isRecorded;
+    isTriggered_m = false;
     triggerFunction_m = std::move(triggerFunction);
     updateFunction_m = std::move(updateFunction);
 }
@@ -17,8 +19,19 @@ std::string Event::getName() {
     return name_m;
 }
 
+bool Event::isRecorded() const {
+    return isRecorded_m;
+}
+
+bool Event::isTriggered() const {
+    return isTriggered_m;
+}
+
 void Event::runTick(Agent &agent, Agents &agents) {
     if (triggerFunction_m(agent, agents)) {
+        isTriggered_m = true;
         updateFunction_m(agent, agents);
     }
+    else
+        isTriggered_m = false;
 }

@@ -19,4 +19,8 @@ add_library(PyNex SHARED
         src/Event.cpp
         include/Event.h
         src/Agent.cpp
-        include/Agent.h)
+        include/Agent.h
+        src/AgentResults.cpp
+        include/AgentResults.h
+        src/MemoryMappedTable.cpp
+        include/MemoryMappedTable.h)

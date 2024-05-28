@@ -55,3 +55,19 @@ void AgentAttributes::runTick(Agent &agent, Agents &agents) {
     for (int i = 0; i < eventCount_m; i++)
         events_m[i].runTick(agent, agents);
 }
+
+std::vector<Property<std::variant<int, double, std::string, bool>>> AgentAttributes::getProperties() {
+    return properties_m;
+}
+
+std::vector<Event> AgentAttributes::getEvents() {
+    return events_m;
+}
+
+std::map<std::string, int> AgentAttributes::getPropertyIndexes() {
+    return propertyIndexes_m;
+}
+
+std::map<std::string, int> AgentAttributes::getEventIndexes() {
+    return eventIndexes_m;
+}

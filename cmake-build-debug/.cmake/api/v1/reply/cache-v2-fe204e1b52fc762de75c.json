@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug"
+			"value" : "e:/Home Desktop Files/Work/University of Manchester/PhD Work/Gitlab Work/Epydex/Epydex/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "E:/Home Desktop Files/Work/University of Manchester/PhD Work/Gitlab Work/Epydex/Epydex/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex"
+			"value" : "E:/Home Desktop Files/Work/University of Manchester/PhD Work/Gitlab Work/Epydex/Epydex"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/EpidemiX"
+			"value" : "C:/Program Files (x86)/PyNex"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -1270,42 +1270,6 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "EpidemiX_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug"
-		},
-		{
-			"name" : "EpidemiX_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "EpidemiX_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex"
-		},
-		{
 			"name" : "PyNex_BINARY_DIR",
 			"properties" : 
 			[
@@ -1315,7 +1279,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex/cmake-build-debug"
+			"value" : "E:/Home Desktop Files/Work/University of Manchester/PhD Work/Gitlab Work/Epydex/Epydex/cmake-build-debug"
 		},
 		{
 			"name" : "PyNex_IS_TOP_LEVEL",
@@ -1339,7 +1303,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/jmmar/Desktop/Laptop Files/Work/University of Manchester/PhD Computer Science/Code/PyNex/PyNex"
+			"value" : "E:/Home Desktop Files/Work/University of Manchester/PhD Work/Gitlab Work/Epydex/Epydex"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

@@ -7,11 +7,12 @@
 #include <string>
 
 #include "AgentAttributes.h"
+#include "AgentResults.h"
 
 
 class Agent {
 public:
-    Agent(std::string name, AgentAttributes  physiology, AgentAttributes  behaviour);
+    Agent(std::string name, AgentAttributes  physiology, AgentAttributes  behaviour, const AgentResults &agentResults);
     AgentAttributes getPhysiology();
     AgentAttributes getBehaviour();
     void runTick(Agents& agents);
@@ -20,6 +21,7 @@ private:
     std::string name_m;
     AgentAttributes physiology_m;
     AgentAttributes behaviour_m;
+    AgentResults agentResults_m;
 };
 
 

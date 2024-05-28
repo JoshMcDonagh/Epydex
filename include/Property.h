@@ -15,14 +15,17 @@
 template<typename T>
 class Property {
 public:
-    explicit Property(std::string name, T startingValue,
+    explicit Property(std::string name, bool isRecorded, T startingValue,
         std::function<T(T, Agent&, Agents&)> updateFunction);
     std::string getName();
+    T get();
+    bool isRecorded() const;
     [[nodiscard]] const std::type_info& getType() const;
     void runTick(Agent& agent, Agents& agents);
 
 private:
     std::string name_m;
+    bool isRecorded_m;
     std::variant<int, double, std::string, bool> value_m;
     std::function<T(T, Agent&, Agents&)> updateFunction_m;
 };
