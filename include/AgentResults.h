@@ -17,6 +17,9 @@ public:
     void runForProperties();
     void runForEvents();
 private:
+    static void setPropertyHeaders(MemoryMappedTable* storedData,
+                                   const std::vector<Property<std::variant<int, double, std::string, bool>>>& properties);
+    static void setEventHeaders(MemoryMappedTable* storedData, const std::vector<Event>& events);
     static void updateProperties(MemoryMappedTable* storedData,
                           const std::vector<Property<std::variant<int, double, std::string, bool>>>& properties);
     static void updateEvents(MemoryMappedTable* storedData, const std::vector<Event>& events);

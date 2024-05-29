@@ -1,5 +1,5 @@
 //
-// Created by jmmar on 13/05/2024.
+// Created by Joshua McDonagh on 13/05/2024.
 //
 
 #ifndef AGENT_H

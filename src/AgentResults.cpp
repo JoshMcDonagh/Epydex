@@ -20,6 +20,12 @@ AgentResults::AgentResults(const std::string &agentName, const AgentAttributes& 
 
     physiologyEventData_m = new MemoryMappedTable(physiologyEventResultsFilename_m, 0, agentPhysiology.getNumOfEvents());
     behaviourEventData_m = new MemoryMappedTable(behaviourEventResultsFilename_m, 0, agentBehaviour.getNumOfEvents());
+
+    setPropertyHeaders(physiologyPropertyData_m, agentPhysiology_m.getProperties());
+    setPropertyHeaders(behaviourPropertyData_m, agentBehaviour_m.getProperties());
+
+    setEventHeaders(physiologyEventData_m, agentPhysiology_m.getEvents());
+    setEventHeaders(behaviourEventData_m, agentBehaviour_m.getEvents());
 }
 
 AgentResults::~AgentResults() {
@@ -39,24 +45,39 @@ void AgentResults::runForEvents() {
     updateEvents(behaviourEventData_m, agentBehaviour_m.getEvents());
 }
 
+void AgentResults::setPropertyHeaders(MemoryMappedTable *storedData,
+                                      const std::vector<Property<std::variant<int, double, std::string, bool>>> &properties) {
+    std::vector<std::variant<int, double, std::string, bool>> propertyHeaders;
+    for (auto property : properties) {
+        if (property.isRecorded())
+            propertyHeaders.emplace_back(property.getName());
+    }
+    storedData->addRow(propertyHeaders);
+}
+
+void AgentResults::setEventHeaders(MemoryMappedTable *storedData, const std::vector<Event> &events) {
+    std::vector<std::variant<int, double, std::string, bool>> eventHeaders;
+    for (auto event : events) {
+        if (event.isRecorded())
+            eventHeaders.emplace_back(event.getName());
+    }
+    storedData->addRow(eventHeaders);
+}
+
 void AgentResults::updateProperties(MemoryMappedTable *storedData, const std::vector<Property<std::variant<int, double, std::string, bool>>>& properties) {
     std::vector<std::variant<int, double, std::string, bool>> propertyData;
-
     for (auto property : properties) {
         if (property.isRecorded())
             propertyData.push_back(property.get());
     }
-
     storedData->addRow(propertyData);
 }
 
 void AgentResults::updateEvents(MemoryMappedTable *storedData, const std::vector<Event>& events) {
     std::vector<std::variant<int, double, std::string, bool>> eventData;
-
     for (const auto& event : events) {
         if (event.isRecorded())
             eventData.emplace_back(event.isTriggered());
     }
-
     storedData->addRow(eventData);
 }
