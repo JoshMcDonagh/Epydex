@@ -4,9 +4,9 @@
 
 #include "../include/AgentGenerator.h"
 
-AgentGenerator::AgentGenerator(function<unique_ptr<Agent>(vector<function<unique_ptr<Property<variant<int, double, string, bool>>()>>>, vector<function<unique_ptr<Event>()>>)> generateAgentFunc,
-                               vector<function<unique_ptr<Property<variant<int, double, string, bool>>()>>> propertyFactories,
-                               vector<function<unique_ptr<Event>()>> eventFactories) {
+AgentGenerator::AgentGenerator(GenerateAgentFunc generateAgentFunc,
+                               PropertyFactories propertyFactories,
+                               EventFactories eventFactories) {
     generateAgentFunc_m = std::move(generateAgentFunc);
     propertyFactories_m = std::move(propertyFactories);
     eventFactories_m = std::move(eventFactories);

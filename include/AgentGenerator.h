@@ -16,19 +16,22 @@
 #include "Event.h"
 
 using namespace std;
+using GenerateAgentFunc = function<unique_ptr<Agent>(vector<function<unique_ptr<Property<variant<int, double, string, bool>>>()>>,
+                                 vector<function<unique_ptr<Event>()>>)>;
+using PropertyFactories = vector<function<unique_ptr<Property<variant<int, double, string, bool>>>()>>;
+using EventFactories = vector<function<unique_ptr<Event>()>>;
 
 class AgentGenerator {
 public:
-    AgentGenerator(function<unique_ptr<Agent>(vector<function<unique_ptr<Property<variant<int, double, string, bool>>()>>>,vector<function<unique_ptr<Event>()>>)>,
-                   vector<function<unique_ptr<Property<variant<int, double, string, bool>>()>>>,
-                   vector<function<unique_ptr<Event>()>>);
+    AgentGenerator(GenerateAgentFunc generateAgentFunc,
+                   PropertyFactories propertyFactories,
+                   EventFactories eventFactories);
     unique_ptr<Agent> generateAgent();
 
 private:
-    function<unique_ptr<Agent>(vector<function<unique_ptr<Property<variant<int, double, string, bool>>()>>>,
-                    vector<function<unique_ptr<Event>()>>)> generateAgentFunc_m;
-    vector<function<unique_ptr<Property<variant<int, double, string, bool>>()>>> propertyFactories_m;
-    vector<function<unique_ptr<Event>()>> eventFactories_m;
+    GenerateAgentFunc generateAgentFunc_m;
+    PropertyFactories propertyFactories_m;
+    EventFactories eventFactories_m;
 };
 
 #endif // AGENTGENERATOR_H
