@@ -2,8 +2,8 @@
 // Created by Joshua McDonagh on 22/05/2024.
 //
 
-#ifndef PYNEX_AGENTRESULTS_H
-#define PYNEX_AGENTRESULTS_H
+#ifndef AGENTRESULTS_H
+#define AGENTRESULTS_H
 
 
 #include <string>
@@ -40,4 +40,4 @@ private:
     std::string behaviourEventResultsFilename_m;
 };
 
-#endif //PYNEX_AGENTRESULTS_H
+#endif //AGENTRESULTS_H

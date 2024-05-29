@@ -1,5 +1,5 @@
 //
-// Created by jmmar on 12/05/2024.
+// Created by Joshua McDonagh on 12/05/2024.
 //
 
 #ifndef PROPERTY_H
@@ -19,7 +19,7 @@ public:
         std::function<T(T, Agent&, Agents&)> updateFunction);
     std::string getName();
     T get();
-    bool isRecorded() const;
+    [[nodiscard]] bool isRecorded() const;
     [[nodiscard]] const std::type_info& getType() const;
     void runTick(Agent& agent, Agents& agents);
 
@@ -30,6 +30,6 @@ private:
     std::function<T(T, Agent&, Agents&)> updateFunction_m;
 };
 
-
+extern template class Property<std::variant<int, double, std::string, bool>>;
 
 #endif //PROPERTY_H

@@ -23,4 +23,6 @@ add_library(PyNex SHARED
         src/AgentResults.cpp
         include/AgentResults.h
         src/MemoryMappedTable.cpp
-        include/MemoryMappedTable.h)
+        include/MemoryMappedTable.h
+        src/AgentGenerator.cpp
+        src/AgentGenerator.h)
