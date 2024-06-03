@@ -4,17 +4,15 @@
 
 #include "../include/Model.h"
 
-ModelResults run(
-    int const numOfCores,
-    bool const areTempFilesCleanedUp,
-    Clock const clock,
-    Agents agents,
-    ModelResults const results) {
-
-
+std::vector<AgentResults> run(int const numOfCores, bool const areTempFilesCleanedUp, Clock clock, Agents agents) {
     while (!clock.isFinished()) {
         agents.runTick();
+        clock.tick();
     }
+
+    std::vector<AgentResults> results;
+    for (int i = 0; i < agents.getNumberOfAgents(); i++)
+        results.push_back(agents.getAgentByIndex(i).getResults());
 
     return results;
 }

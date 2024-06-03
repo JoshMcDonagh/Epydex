@@ -16,6 +16,9 @@
 class Agents {
 public:
     Agents(int numOfAgents, std::map<std::string, int> agentIndexes, std::vector<Agent> agentVector);
+    [[nodiscard]] int getNumberOfAgents() const;
+    Agent getAgentByIndex(int agentIndex);
+    Agent getAgentByName(const std::string& agentName);
     void runTick();
 
 private:

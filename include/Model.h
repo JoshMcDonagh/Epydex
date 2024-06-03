@@ -7,13 +7,7 @@
 
 #include "Agents.h"
 #include "Clock.h"
-#include "ModelResults.h"
 
-ModelResults run(
-    int numOfCores,
-    bool areTempFilesCleanedUp,
-    Clock clock,
-    Agents agents,
-    ModelResults results);
+std::vector<AgentResults> run(int numOfCores, bool areTempFilesCleanedUp, Clock clock, Agents agents);
 
 #endif //MODEL_H

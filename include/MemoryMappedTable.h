@@ -21,6 +21,7 @@ public:
 
     std::vector<DataVariant> operator[](size_t index);
     void addRow(const std::vector<DataVariant>& data);
+    void addColumn(const std::vector<DataVariant>& newColumn);
     void setColumn(size_t columnIndex, const std::vector<DataVariant>& newColumn);
     std::vector<DataVariant> getColumn(size_t columnIndex);
 
@@ -29,13 +30,13 @@ private:
     std::string serialize(const std::vector<DataVariant>& row);
     std::vector<DataVariant> deserialize(const std::string& data);
 
-    std::string filename_;
-    size_t rowCount_;
-    size_t rowSize_;
-    HANDLE fileHandle_;
-    HANDLE mapHandle_;
-    char* data_;
-    size_t currentCapacity_;
+    std::string filename_m;
+    size_t rowCount_m;
+    size_t rowSize_m;
+    HANDLE fileHandle_m;
+    HANDLE mapHandle_m;
+    char* data_m;
+    size_t currentCapacity_m;
 };
 
 #endif //PYNEX_MEMORYMAPPEDTABLE_H

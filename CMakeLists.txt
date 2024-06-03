@@ -10,8 +10,6 @@ add_library(PyNex SHARED
         include/clock.h
         src/agents.cpp
         include/agents.h
-        src/ModelResults.cpp
-        include/ModelResults.h
         src/AgentAttributes.cpp
         include/AgentAttributes.h
         src/Property.cpp
