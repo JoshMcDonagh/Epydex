@@ -11,6 +11,7 @@
 #include <variant>
 #include <string>
 #include "MemoryMappedTable.h"
+#include "Agent.h"
 
 using StoredType = std::variant<int, double, std::string, bool>;
 using MergeFunc = std::function<std::vector<StoredType>(std::string, std::vector<StoredType>, std::vector<StoredType>)>;
@@ -31,6 +32,7 @@ public:
                  MergeFunc mergePhysiologyEventResultsFunc,
                  MergeFunc mergeBehaviourEventResultsFunc);
     ~ModelResults();
+    void run(std::vector<Agent> agents);
 
 private:
     MemoryMappedTable* physiologyPropertyData_m;

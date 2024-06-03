@@ -16,6 +16,11 @@ public:
     ~AgentResults();
     void runForProperties();
     void runForEvents();
+    MemoryMappedTable* getPhysiologyPropertyData();
+    MemoryMappedTable* getBehaviourPropertyData();
+    MemoryMappedTable* getPhysiologyEventData();
+    MemoryMappedTable* getBehaviourEventData();
+
 private:
     static void setPropertyHeaders(MemoryMappedTable* storedData,
                                    const std::vector<Property<std::variant<int, double, std::string, bool>>>& properties);

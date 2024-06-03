@@ -42,3 +42,16 @@ ModelResults::~ModelResults() {
     free(physiologyEventData_m);
     free(behaviourEventData_m);
 }
+
+void ModelResults::run(std::vector<Agent> agents) {
+    int numberOfPhysiologyProperties = agents[0].getPhysiology().getNumOfProperties();
+    int numberOfBehaviourProperties = agents[0].getBehaviour().getNumOfProperties();
+    int numberOfPhysiologyEvents = agents[0].getPhysiology().getNumOfEvents();
+    int numberOfBehaviourEvents = agents[0].getBehaviour().getNumOfEvents();
+
+    for (int i = 0; i < agents.size(); i++) {
+        Agent agent = agents[i];
+        MemoryMappedTable* agentPhysiologyPropertyData = agent.getResults().getPhysiologyPropertyData();
+        
+    }
+}

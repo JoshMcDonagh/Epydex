@@ -41,6 +41,22 @@ void AgentResults::runForEvents() {
     updateEvents(behaviourEventData_m, agentBehaviour_m.getEvents());
 }
 
+MemoryMappedTable* AgentResults::getPhysiologyPropertyData() {
+    return physiologyPropertyData_m;
+}
+
+MemoryMappedTable* AgentResults::getBehaviourPropertyData() {
+    return behaviourPropertyData_m;
+}
+
+MemoryMappedTable* AgentResults::getPhysiologyEventData() {
+    return physiologyEventData_m;
+}
+
+MemoryMappedTable* AgentResults::getBehaviourEventData() {
+    return behaviourEventData_m;
+}
+
 void AgentResults::setPropertyHeaders(MemoryMappedTable *storedData,
                                       const std::vector<Property<std::variant<int, double, std::string, bool>>> &properties) {
     std::vector<std::variant<int, double, std::string, bool>> propertyHeaders;

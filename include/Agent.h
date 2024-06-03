@@ -19,6 +19,7 @@ public:
     Agent(std::string name, AgentAttributes  physiology, AgentAttributes  behaviour, const AgentResults &agentResults);
     AgentAttributes getPhysiology();
     AgentAttributes getBehaviour();
+    AgentResults getResults();
     void runTick(const Agents* agents);
 
 private:
