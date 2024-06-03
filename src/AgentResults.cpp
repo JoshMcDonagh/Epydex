@@ -10,19 +10,16 @@ AgentResults::AgentResults(const std::string &agentName, const AgentAttributes& 
         : agentPhysiology_m(agentPhysiology), agentBehaviour_m(agentBehaviour) {
     physiologyPropertyResultsFilename_m = agentName + "_" + physiologyPropertyResultsFilenameSuffix_m;
     behaviourPropertyResultsFilename_m = agentName + "_" + behaviourPropertyResultsFilenameSuffix_m;
-
     physiologyEventResultsFilename_m = agentName + "_" + physiologyEventResultsFilenameSuffix_m;
     behaviourEventResultsFilename_m = agentName + "_" + behaviourEventResultsFilenameSuffix_m;
 
     physiologyPropertyData_m = new MemoryMappedTable(physiologyPropertyResultsFilename_m, 0, agentPhysiology.getNumOfProperties());
     behaviourPropertyData_m = new MemoryMappedTable(behaviourPropertyResultsFilename_m, 0, agentBehaviour.getNumOfProperties());
-
     physiologyEventData_m = new MemoryMappedTable(physiologyEventResultsFilename_m, 0, agentPhysiology.getNumOfEvents());
     behaviourEventData_m = new MemoryMappedTable(behaviourEventResultsFilename_m, 0, agentBehaviour.getNumOfEvents());
 
     setPropertyHeaders(physiologyPropertyData_m, agentPhysiology_m.getProperties());
     setPropertyHeaders(behaviourPropertyData_m, agentBehaviour_m.getProperties());
-
     setEventHeaders(physiologyEventData_m, agentPhysiology_m.getEvents());
     setEventHeaders(behaviourEventData_m, agentBehaviour_m.getEvents());
 }

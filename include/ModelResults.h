@@ -18,6 +18,10 @@ using MergeFunc = std::function<std::vector<StoredType>(std::string, std::vector
 class ModelResults {
 public:
     ModelResults(int coreNumber,
+                 int numOfPhysiologyProperties,
+                 int numOfBehaviourProperties,
+                 int numOfPhysiologyEvents,
+                 int numOfBehaviourEvents,
                  MergeFunc mergeAgentPhysiologyPropertyResultsWithModelResultsFunc,
                  MergeFunc mergeAgentBehaviourPropertyResultsWithModelResultsFunc,
                  MergeFunc mergeAgentPhysiologyEventResultsWithModelResultsFunc,
@@ -26,8 +30,13 @@ public:
                  MergeFunc mergeBehaviourPropertyResultsFunc,
                  MergeFunc mergePhysiologyEventResultsFunc,
                  MergeFunc mergeBehaviourEventResultsFunc);
+    ~ModelResults();
 
 private:
+    MemoryMappedTable* physiologyPropertyData_m;
+    MemoryMappedTable* behaviourPropertyData_m;
+    MemoryMappedTable* physiologyEventData_m;
+    MemoryMappedTable* behaviourEventData_m;
     std::string physiologyPropertyResultsFilename_Suffix_m = "model_physiology_property_results.dat";
     std::string behaviourPropertyResultsFilename_Suffix_m = "model_behaviour_property_results.dat";
     std::string physiologyEventResultsFilename_Suffix_m = "model_physiology_event_results.dat";
