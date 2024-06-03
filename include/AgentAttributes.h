@@ -12,6 +12,10 @@
 #include "Event.h"
 
 
+class Agent;
+class Agents;
+
+
 class AgentAttributes {
 public:
     explicit AgentAttributes(const Agents &agents);
@@ -25,7 +29,7 @@ public:
     Event getEventByName(const std::string& name);
     [[nodiscard]] int getNumOfProperties() const;
     [[nodiscard]] int getNumOfEvents() const;
-    void runTick(Agent& agent, Agents& agents);
+    void runTick(const Agent* agent, const Agents* agents);
 
 private:
     int propertyCount_m;

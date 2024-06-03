@@ -46,7 +46,7 @@ int AgentAttributes::getNumOfEvents() const {
     return eventCount_m;
 }
 
-void AgentAttributes::runTick(Agent &agent, Agents &agents) {
+void AgentAttributes::runTick(const Agent* agent, const Agents* agents) {
     // Run ticks for the stored properties
     for (int i = 0; i < propertyCount_m; i++)
         properties_m[i].runTick(agent, agents);

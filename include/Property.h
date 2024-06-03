@@ -12,16 +12,20 @@
 #include "Agents.h"
 
 
+class Agent;
+class Agents;
+
+
 template<typename T>
 class Property {
 public:
     explicit Property(std::string name, bool isRecorded, T startingValue,
-        std::function<T(T, Agent&, Agents&)> updateFunction);
+                      std::function<T(T, const Agent*, const Agents*)> updateFunction);
     std::string getName();
     T get();
     [[nodiscard]] bool isRecorded() const;
     [[nodiscard]] const std::type_info& getType() const;
-    void runTick(Agent& agent, Agents& agents);
+    void runTick(const Agent* agent, const Agents* agents);
 
 private:
     std::string name_m;

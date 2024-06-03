@@ -19,7 +19,7 @@ AgentAttributes Agent::getBehaviour() {
     return behaviour_m;
 }
 
-void Agent::runTick(Agents& agents) {
+void Agent::runTick(const Agents* agents) {
     agentResults_m.runForEvents();
     physiology_m.runTick(this, agents);
     behaviour_m.runTick(this, agents);

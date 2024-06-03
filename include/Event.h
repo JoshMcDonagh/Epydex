@@ -10,22 +10,26 @@
 #include "Agents.h"
 
 
+class Agent;
+class Agents;
+
+
 class Event {
 public:
     explicit Event(std::string name, bool isRecorded,
-                   std::function<bool(Agent&, Agents&)> triggerFunction,
-                   std::function<void(Agent&, Agents&)> updateFunction);
+                   std::function<bool(const Agent*, const Agents*)> triggerFunction,
+                   std::function<void(const Agent*, const Agents*)> updateFunction);
     std::string getName();
     [[nodiscard]] bool isRecorded() const;
     [[nodiscard]] bool isTriggered() const;
-    void runTick(Agent& agent, Agents& agents);
+    void runTick(const Agent* agent, const Agents* agents);
 
 private:
     std::string name_m;
     bool isRecorded_m;
     bool isTriggered_m;
-    std::function<bool(Agent&, Agents&)> triggerFunction_m;
-    std::function<void(Agent&, Agents&)> updateFunction_m;
+    std::function<bool(const Agent*, const Agents*)> triggerFunction_m;
+    std::function<void(const Agent*, const Agents*)> updateFunction_m;
 };
 
 

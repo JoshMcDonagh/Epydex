@@ -8,7 +8,7 @@
 
 template<typename T>
 Property<T>::Property(std::string name, bool isRecorded, T startingValue,
-        std::function<T(T, Agent&, Agents&)> updateFunction) {
+        std::function<T(T, const Agent*, const Agents*)> updateFunction) {
     name_m = std::move(name);
     isRecorded_m = isRecorded;
     value_m = std::move(startingValue);
@@ -36,7 +36,7 @@ const std::type_info& Property<T>::getType() const {
 }
 
 template<typename T>
-void Property<T>::runTick(Agent& agent, Agents& agents) {
+void Property<T>::runTick(const Agent* agent, const Agents* agents) {
     value_m = updateFunction_m(value_m, agent, agents);
 }
 
