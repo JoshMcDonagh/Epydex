@@ -21,6 +21,8 @@ public:
 
     std::vector<DataVariant> operator[](size_t index);
     void addRow(const std::vector<DataVariant>& data);
+    void setColumn(size_t columnIndex, const std::vector<DataVariant>& newColumn);
+    std::vector<DataVariant> getColumn(size_t columnIndex);
 
 private:
     void resize(size_t newRowCount);

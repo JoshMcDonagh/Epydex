@@ -98,6 +98,39 @@ void MemoryMappedTable::addRow(const std::vector<DataVariant>& newRow) {
     rowCount_++;
 }
 
+void MemoryMappedTable::setColumn(size_t columnIndex, const std::vector<DataVariant>& newColumn) {
+    if (newColumn.size() != rowCount_) {
+        throw std::invalid_argument("Column size does not match row count");
+    }
+
+    for (size_t i = 0; i < rowCount_; ++i) {
+        std::vector<DataVariant> row = (*this)[i];
+        if (columnIndex >= row.size()) {
+            throw std::out_of_range("Column index out of range");
+        }
+        row[columnIndex] = newColumn[i];
+        std::string serializedRow = serialize(row);
+        if (serializedRow.size() > rowSize_) {
+            throw std::runtime_error("Row size exceeds allocated row size");
+        }
+        std::memcpy(&data_[i * rowSize_], serializedRow.c_str(), serializedRow.size());
+    }
+}
+
+std::vector<DataVariant> MemoryMappedTable::getColumn(size_t columnIndex) {
+    std::vector<DataVariant> columnData;
+
+    for (size_t i = 0; i < rowCount_; ++i) {
+        std::vector<DataVariant> row = (*this)[i];
+        if (columnIndex >= row.size()) {
+            throw std::out_of_range("Column index out of range");
+        }
+        columnData.push_back(row[columnIndex]);
+    }
+
+    return columnData;
+}
+
 // Overloaded operator[]: provides access to the rows
 std::vector<DataVariant> MemoryMappedTable::operator[](size_t index) {
     if (index >= rowCount_) {
