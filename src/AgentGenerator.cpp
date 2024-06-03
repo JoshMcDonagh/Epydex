@@ -12,6 +12,6 @@ AgentGenerator::AgentGenerator(GenerateAgentFunc generateAgentFunc,
     eventFactories_m = std::move(eventFactories);
 }
 
-unique_ptr<Agent> AgentGenerator::generateAgent() {
+std::unique_ptr<Agent> AgentGenerator::generateAgent() {
     return generateAgentFunc_m(propertyFactories_m, eventFactories_m);
 }

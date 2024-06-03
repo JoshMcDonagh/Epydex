@@ -15,18 +15,17 @@
 #include "Property.h"
 #include "Event.h"
 
-using namespace std;
-using GenerateAgentFunc = function<unique_ptr<Agent>(vector<function<unique_ptr<Property<variant<int, double, string, bool>>>()>>,
-                                 vector<function<unique_ptr<Event>()>>)>;
-using PropertyFactories = vector<function<unique_ptr<Property<variant<int, double, string, bool>>>()>>;
-using EventFactories = vector<function<unique_ptr<Event>()>>;
+using GenerateAgentFunc = std::function<std::unique_ptr<Agent>(std::vector<std::function<std::unique_ptr<Property<std::variant<int, double, std::string, bool>>>()>>,
+                                                               std::vector<std::function<std::unique_ptr<Event>()>>)>;
+using PropertyFactories = std::vector<std::function<std::unique_ptr<Property<std::variant<int, double, std::string, bool>>>()>>;
+using EventFactories = std::vector<std::function<std::unique_ptr<Event>()>>;
 
 class AgentGenerator {
 public:
     AgentGenerator(GenerateAgentFunc generateAgentFunc,
                    PropertyFactories propertyFactories,
                    EventFactories eventFactories);
-    unique_ptr<Agent> generateAgent();
+    std::unique_ptr<Agent> generateAgent();
 
 private:
     GenerateAgentFunc generateAgentFunc_m;
