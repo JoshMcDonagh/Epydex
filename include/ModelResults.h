@@ -1,5 +1,5 @@
 //
-// Created by jmmar on 09/05/2024.
+// Created by Joshua McDonagh on 09/05/2024.
 //
 
 #ifndef MODEL_RESULTS_H
