@@ -51,6 +51,8 @@ MemoryMappedTable::~MemoryMappedTable() {
     }
     if (fileHandle_m != INVALID_HANDLE_VALUE) {
         CloseHandle(fileHandle_m);
+        // Delete the file after closing the handle
+        DeleteFile(filename_m.c_str());
     }
 }
 
