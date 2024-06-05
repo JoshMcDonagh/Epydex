@@ -33,3 +33,29 @@ set(HEADERS
         include/MemoryMappedTable.h
         include/AgentGenerator.h
 )
+
+# Download and integrate Google Test
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/release-1.11.0.zip
+)
+# Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+# Add this section to create a test executable
+add_executable(
+        runTests
+        tests/test_main.cpp  # Add your test files here
+)
+
+target_link_libraries(
+        runTests
+        gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(runTests)
