@@ -10,22 +10,25 @@
 #include "Agents.h"
 #include "Property.h"
 #include "Event.h"
+#include "DataVariant.h"
 
 
 class Agent;
 class Agents;
+class Property<DataVariant>;
+class Event;
 
 
 class AgentAttributes {
 public:
     explicit AgentAttributes(const Agents &agents);
-    void addProperty(Property<std::variant<int, double, std::string, bool>>& property);
+    void addProperty(Property<DataVariant>& property);
     void addEvent(Event& event);
-    std::vector<Property<std::variant<int, double, std::string, bool>>> getProperties();
+    std::vector<Property<DataVariant>> getProperties();
     std::vector<Event> getEvents();
-    Property<std::variant<int, double, std::string, bool>> getPropertyByIndex(int index);
+    Property<DataVariant> getPropertyByIndex(int index);
     Event getEventByIndex(int index);
-    Property<std::variant<int, double, std::string, bool>> getPropertyByName(const std::string& name);
+    Property<DataVariant> getPropertyByName(const std::string& name);
     Event getEventByName(const std::string& name);
     [[nodiscard]] int getNumOfProperties() const;
     [[nodiscard]] int getNumOfEvents() const;
@@ -34,7 +37,7 @@ public:
 private:
     int propertyCount_m;
     int eventCount_m;
-    std::vector<Property<std::variant<int, double, std::string, bool>>> properties_m;
+    std::vector<Property<DataVariant>> properties_m;
     std::vector<Event> events_m;
     std::map<std::string, int> propertyIndexes_m;
     std::map<std::string, int> eventIndexes_m;

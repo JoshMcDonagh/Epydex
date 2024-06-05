@@ -11,8 +11,7 @@
 #include <variant>
 #include <vector>
 #include <sstream>
-
-using DataVariant = std::variant<int, double, std::string, bool>;
+#include "DataVariant.h"
 
 class MemoryMappedTable {
 public:

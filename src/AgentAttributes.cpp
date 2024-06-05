@@ -10,7 +10,7 @@ AgentAttributes::AgentAttributes(Agents const &agents) {
     eventCount_m = 0;
 }
 
-void AgentAttributes::addProperty(Property<std::variant<int, double, std::string, bool>>& property) {
+void AgentAttributes::addProperty(Property<DataVariant>& property) {
     properties_m.push_back(property);
     propertyIndexes_m[property.getName()] = propertyCount_m;
     propertyCount_m += 1;
@@ -22,7 +22,7 @@ void AgentAttributes::addEvent(Event& event) {
     eventCount_m += 1;
 }
 
-Property<std::variant<int, double, std::string, bool>> AgentAttributes::getPropertyByIndex(int const index) {
+Property<DataVariant> AgentAttributes::getPropertyByIndex(int const index) {
     return properties_m[index];
 }
 
@@ -30,7 +30,7 @@ Event AgentAttributes::getEventByIndex(int const index) {
     return events_m[index];
 }
 
-Property<std::variant<int, double, std::string, bool>> AgentAttributes::getPropertyByName(const std::string& name) {
+Property<DataVariant> AgentAttributes::getPropertyByName(const std::string& name) {
     return properties_m[propertyIndexes_m[name]];
 }
 
@@ -56,7 +56,7 @@ void AgentAttributes::runTick(const Agent* agent, const Agents* agents) {
         events_m[i].runTick(agent, agents);
 }
 
-std::vector<Property<std::variant<int, double, std::string, bool>>> AgentAttributes::getProperties() {
+std::vector<Property<DataVariant>> AgentAttributes::getProperties() {
     return properties_m;
 }
 

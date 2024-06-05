@@ -164,6 +164,83 @@ build CMakeFiles/runTests.dir/tests/test_main.cpp.obj: CXX_COMPILER__runTests_un
   OBJECT_DIR = CMakeFiles\runTests.dir
   OBJECT_FILE_DIR = CMakeFiles\runTests.dir\tests
 
+build CMakeFiles/runTests.dir/tests/ClockTest.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/tests/ClockTest.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\tests\ClockTest.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\tests
+
+build CMakeFiles/runTests.dir/src/Model.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Model.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\Model.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/Clock.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Clock.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\Clock.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/Agents.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Agents.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\Agents.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/AgentAttributes.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/AgentAttributes.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\AgentAttributes.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/Property.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Property.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\Property.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/Event.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Event.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\Event.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/Agent.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Agent.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\Agent.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/AgentResults.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/AgentResults.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\AgentResults.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/MemoryMappedTable.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/MemoryMappedTable.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\MemoryMappedTable.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
+build CMakeFiles/runTests.dir/src/AgentGenerator.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/AgentGenerator.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles\runTests.dir\src\AgentGenerator.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles\runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target runTests
@@ -172,7 +249,7 @@ build CMakeFiles/runTests.dir/tests/test_main.cpp.obj: CXX_COMPILER__runTests_un
 #############################################
 # Link the executable runTests.exe
 
-build runTests.exe runTests[1]_tests.cmake | ${cmake_ninja_workdir}runTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__runTests_Debug CMakeFiles/runTests.dir/tests/test_main.cpp.obj | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+build runTests.exe runTests[1]_tests.cmake | ${cmake_ninja_workdir}runTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__runTests_Debug CMakeFiles/runTests.dir/tests/test_main.cpp.obj CMakeFiles/runTests.dir/tests/ClockTest.cpp.obj CMakeFiles/runTests.dir/src/Model.cpp.obj CMakeFiles/runTests.dir/src/Clock.cpp.obj CMakeFiles/runTests.dir/src/Agents.cpp.obj CMakeFiles/runTests.dir/src/AgentAttributes.cpp.obj CMakeFiles/runTests.dir/src/Property.cpp.obj CMakeFiles/runTests.dir/src/Event.cpp.obj CMakeFiles/runTests.dir/src/Agent.cpp.obj CMakeFiles/runTests.dir/src/AgentResults.cpp.obj CMakeFiles/runTests.dir/src/MemoryMappedTable.cpp.obj CMakeFiles/runTests.dir/src/AgentGenerator.cpp.obj | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
   FLAGS = -g
   LINK_LIBRARIES = lib/libgtest_maind.a  lib/libgtestd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\runTests.dir

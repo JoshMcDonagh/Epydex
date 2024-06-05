@@ -10,6 +10,7 @@
 #include <variant>
 
 #include "Agents.h"
+#include "DataVariant.h"
 
 
 class Agent;
@@ -30,10 +31,10 @@ public:
 private:
     std::string name_m;
     bool isRecorded_m;
-    std::variant<int, double, std::string, bool> value_m;
+    DataVariant value_m;
     std::function<T(T, Agent&, Agents&)> updateFunction_m;
 };
 
-extern template class Property<std::variant<int, double, std::string, bool>>;
+extern template class Property<DataVariant>;
 
 #endif //PROPERTY_H

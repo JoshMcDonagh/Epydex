@@ -12,6 +12,8 @@
 
 
 class Agents;
+class AgentAttributes;
+class AgentResults;
 
 
 class Agent {

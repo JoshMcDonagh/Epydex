@@ -39,4 +39,3 @@ template<typename T>
 void Property<T>::runTick(const Agent* agent, const Agents* agents) {
     value_m = updateFunction_m(value_m, agent, agents);
 }
-

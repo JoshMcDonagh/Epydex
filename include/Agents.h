@@ -13,6 +13,8 @@
 #include "AgentAttributes.h"
 #include "Agent.h"
 
+class Agent;
+
 class Agents {
 public:
     Agents(int numOfAgents, std::map<std::string, int> agentIndexes, std::vector<Agent> agentVector);

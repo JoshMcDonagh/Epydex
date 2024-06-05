@@ -18,6 +18,17 @@ add_library(Epydex SHARED
         src/AgentResults.cpp
         src/MemoryMappedTable.cpp
         src/AgentGenerator.cpp
+        include/model.h
+        include/clock.h
+        include/agents.h
+        include/AgentAttributes.h
+        include/Property.h
+        include/Event.h
+        include/Agent.h
+        include/AgentResults.h
+        include/MemoryMappedTable.h
+        include/AgentGenerator.h
+        include/DataVariant.h
 )
 
 # List header files for clarity (not strictly necessary)
@@ -32,6 +43,7 @@ set(HEADERS
         include/AgentResults.h
         include/MemoryMappedTable.h
         include/AgentGenerator.h
+        include/DataVariant.h
 )
 
 # Download and integrate Google Test
@@ -49,7 +61,18 @@ enable_testing()
 # Add this section to create a test executable
 add_executable(
         runTests
-        tests/test_main.cpp  # Add your test files here
+        tests/test_main.cpp
+        tests/ClockTest.cpp  # Add your test files here
+        src/model.cpp
+        src/clock.cpp
+        src/agents.cpp
+        src/AgentAttributes.cpp
+        src/Property.cpp
+        src/Event.cpp
+        src/Agent.cpp
+        src/AgentResults.cpp
+        src/MemoryMappedTable.cpp
+        src/AgentGenerator.cpp
 )
 
 target_link_libraries(
