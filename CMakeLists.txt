@@ -1,26 +1,35 @@
 cmake_minimum_required(VERSION 3.28)
-project(PyNex)
+project(Epydex)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_library(PyNex SHARED
-        include/model.h
+# Include directories
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+# Add library
+add_library(Epydex SHARED
         src/model.cpp
         src/clock.cpp
-        include/clock.h
         src/agents.cpp
-        include/agents.h
         src/AgentAttributes.cpp
-        include/AgentAttributes.h
         src/Property.cpp
-        include/Property.h
         src/Event.cpp
-        include/Event.h
         src/Agent.cpp
-        include/Agent.h
         src/AgentResults.cpp
-        include/AgentResults.h
         src/MemoryMappedTable.cpp
-        include/MemoryMappedTable.h
         src/AgentGenerator.cpp
-        src/AgentGenerator.h)
+)
+
+# List header files for clarity (not strictly necessary)
+set(HEADERS
+        include/model.h
+        include/clock.h
+        include/agents.h
+        include/AgentAttributes.h
+        include/Property.h
+        include/Event.h
+        include/Agent.h
+        include/AgentResults.h
+        include/MemoryMappedTable.h
+        include/AgentGenerator.h
+)
