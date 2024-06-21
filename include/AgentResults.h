@@ -5,15 +5,20 @@
 #ifndef AGENTRESULTS_H
 #define AGENTRESULTS_H
 
-
 #include <string>
-#include "AgentAttributes.h"
-#include "MemoryMappedTable.h"
+#include <vector>
+
+#include "DataVariant.h"
 #include "Property.h"
+#include "AgentAttributes.h"
+#include "Event.h"
+
+// Forward declaration to avoid circular dependencies
+class MemoryMappedTable;
 
 class AgentResults {
 public:
-    AgentResults(const std::string &agentName, const AgentAttributes& agentPhysiology, const AgentAttributes& agentBehaviour);
+    AgentResults(const std::string &agentName, const AgentAttributes &agentPhysiology, const AgentAttributes &agentBehaviour);
     ~AgentResults();
     void runForProperties();
     void runForEvents();
@@ -24,10 +29,10 @@ public:
 
 private:
     static void setPropertyHeaders(MemoryMappedTable* storedData,
-                                   const std::vector<Property<std::variant<int, double, std::string, bool>>>& properties);
+                                   const std::vector<Property<DataVariant>>& properties);
     static void setEventHeaders(MemoryMappedTable* storedData, const std::vector<Event>& events);
     static void updateProperties(MemoryMappedTable* storedData,
-                          const std::vector<Property<std::variant<int, double, std::string, bool>>>& properties);
+                                 const std::vector<Property<DataVariant>>& properties);
     static void updateEvents(MemoryMappedTable* storedData, const std::vector<Event>& events);
 
     MemoryMappedTable* physiologyPropertyData_m;

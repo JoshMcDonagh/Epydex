@@ -4,20 +4,17 @@
 
 #ifndef AGENTATTRIBUTES_H
 #define AGENTATTRIBUTES_H
+
 #include <map>
 #include <vector>
-
-#include "Agents.h"
+#include <string>
 #include "Property.h"
-#include "Event.h"
 #include "DataVariant.h"
+#include "Event.h"
 
-
+// Forward declarations to avoid circular dependencies
 class Agent;
 class Agents;
-class Property<DataVariant>;
-class Event;
-
 
 class AgentAttributes {
 public:
@@ -33,8 +30,8 @@ public:
     [[nodiscard]] int getNumOfProperties() const;
     [[nodiscard]] int getNumOfEvents() const;
     void runTick(const Agent* agent, const Agents* agents);
-    std::map<std::string, int> AgentAttributes::getPropertyIndexes();
-    std::map<std::string, int> AgentAttributes::getEventIndexes();
+    std::map<std::string, int> getPropertyIndexes();
+    std::map<std::string, int> getEventIndexes();
 
 private:
     int propertyCount_m;
@@ -44,7 +41,5 @@ private:
     std::map<std::string, int> propertyIndexes_m;
     std::map<std::string, int> eventIndexes_m;
 };
-
-
 
 #endif //AGENTATTRIBUTES_H

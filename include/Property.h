@@ -10,9 +10,7 @@
 #include <string>
 #include <variant>
 #include <typeinfo>
-
-#include "Agents.h"
-#include "DataVariant.h"
+#include "DataVariant.h"  // Ensure DataVariant is included
 
 class Agent;
 class Agents;
@@ -22,8 +20,8 @@ class Property {
 public:
     explicit Property(std::string name, bool isRecorded, T startingValue,
                       std::function<T(T, const Agent*, const Agents*)> updateFunction);
-    std::string getName();
-    T get();
+    std::string getName() const;  // Note the 'const' keyword
+    T get() const;  // Note the 'const' keyword
     [[nodiscard]] bool isRecorded() const;
     [[nodiscard]] const std::type_info& getType() const;
     void runTick(const Agent* agent, const Agents* agents);
@@ -41,12 +39,12 @@ Property<T>::Property(std::string name, bool isRecorded, T startingValue,
         : name_m(std::move(name)), isRecorded_m(isRecorded), value_m(std::move(startingValue)), updateFunction_m(std::move(updateFunction)) {}
 
 template<typename T>
-std::string Property<T>::getName() {
+std::string Property<T>::getName() const {
     return name_m;
 }
 
 template<typename T>
-T Property<T>::get() {
+T Property<T>::get() const {
     return value_m;
 }
 

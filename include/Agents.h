@@ -9,8 +9,6 @@
 #include <vector>
 #include <map>
 #include <string>
-
-#include "AgentAttributes.h"
 #include "Agent.h"
 
 class Agent;
@@ -28,7 +26,5 @@ private:
     std::map<std::string, int> agentIndexes_m;
     std::vector<Agent> agentVector_m;
 };
-
-
 
 #endif //AGENTS_H

@@ -3,7 +3,6 @@
 //
 
 #include <utility>
-
 #include "../include/Agents.h"
 
 Agents::Agents(int numOfAgents, std::map<std::string, int> agentIndexes, std::vector<Agent> agentVector) {

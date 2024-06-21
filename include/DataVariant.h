@@ -1,5 +1,5 @@
 //
-// Created by v48305jm on 05/06/2024.
+// Created by Joshua McDonagh on 05/06/2024.
 //
 
 #ifndef DATAVARIANT_H

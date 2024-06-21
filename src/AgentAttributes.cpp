@@ -4,8 +4,7 @@
 
 #include "../include/AgentAttributes.h"
 
-
-AgentAttributes::AgentAttributes(Agents const &agents) {
+AgentAttributes::AgentAttributes(const Agents &agents) {
     propertyCount_m = 0;
     eventCount_m = 0;
 }

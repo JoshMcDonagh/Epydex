@@ -2,12 +2,14 @@
 // Created by Joshua McDonagh on 22/05/2024.
 //
 
-
 #include "../include/AgentResults.h"
+#include "../include/MemoryMappedTable.h"
+#include "../include/AgentAttributes.h"
+#include "../include/Event.h"
 
 AgentResults::AgentResults(const std::string &agentName, const AgentAttributes& agentPhysiology,
                            const AgentAttributes& agentBehaviour)
-        : agentPhysiology_m(agentPhysiology), agentBehaviour_m(agentBehaviour) {
+    : agentPhysiology_m(agentPhysiology), agentBehaviour_m(agentBehaviour) {
     physiologyPropertyResultsFilename_m = agentName + "_" + physiologyPropertyResultsFilenameSuffix_m;
     behaviourPropertyResultsFilename_m = agentName + "_" + behaviourPropertyResultsFilenameSuffix_m;
     physiologyEventResultsFilename_m = agentName + "_" + physiologyEventResultsFilenameSuffix_m;
@@ -25,10 +27,10 @@ AgentResults::AgentResults(const std::string &agentName, const AgentAttributes& 
 }
 
 AgentResults::~AgentResults() {
-    free(physiologyPropertyData_m);
-    free(behaviourPropertyData_m);
-    free(physiologyEventData_m);
-    free(behaviourEventData_m);
+    delete physiologyPropertyData_m;
+    delete behaviourPropertyData_m;
+    delete physiologyEventData_m;
+    delete behaviourEventData_m;
 }
 
 void AgentResults::runForProperties() {
@@ -58,9 +60,9 @@ MemoryMappedTable* AgentResults::getBehaviourEventData() {
 }
 
 void AgentResults::setPropertyHeaders(MemoryMappedTable *storedData,
-                                      const std::vector<Property<std::variant<int, double, std::string, bool>>> &properties) {
-    std::vector<std::variant<int, double, std::string, bool>> propertyHeaders;
-    for (auto property : properties) {
+                                      const std::vector<Property<DataVariant>> &properties) {
+    std::vector<DataVariant> propertyHeaders;
+    for (const auto &property : properties) {
         if (property.isRecorded())
             propertyHeaders.emplace_back(property.getName());
     }
@@ -68,26 +70,26 @@ void AgentResults::setPropertyHeaders(MemoryMappedTable *storedData,
 }
 
 void AgentResults::setEventHeaders(MemoryMappedTable *storedData, const std::vector<Event> &events) {
-    std::vector<std::variant<int, double, std::string, bool>> eventHeaders;
-    for (auto event : events) {
+    std::vector<DataVariant> eventHeaders;
+    for (const auto &event : events) {
         if (event.isRecorded())
             eventHeaders.emplace_back(event.getName());
     }
     storedData->addRow(eventHeaders);
 }
 
-void AgentResults::updateProperties(MemoryMappedTable *storedData, const std::vector<Property<std::variant<int, double, std::string, bool>>>& properties) {
-    std::vector<std::variant<int, double, std::string, bool>> propertyData;
-    for (auto property : properties) {
+void AgentResults::updateProperties(MemoryMappedTable *storedData, const std::vector<Property<DataVariant>> &properties) {
+    std::vector<DataVariant> propertyData;
+    for (const auto &property : properties) {
         if (property.isRecorded())
             propertyData.push_back(property.get());
     }
     storedData->addRow(propertyData);
 }
 
-void AgentResults::updateEvents(MemoryMappedTable *storedData, const std::vector<Event>& events) {
-    std::vector<std::variant<int, double, std::string, bool>> eventData;
-    for (const auto& event : events) {
+void AgentResults::updateEvents(MemoryMappedTable *storedData, const std::vector<Event> &events) {
+    std::vector<DataVariant> eventData;
+    for (const auto &event : events) {
         if (event.isRecorded())
             eventData.emplace_back(event.isTriggered());
     }

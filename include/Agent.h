@@ -4,24 +4,19 @@
 
 #ifndef AGENT_H
 #define AGENT_H
-#include <string>
 
+#include <string>
 #include "AgentAttributes.h"
 #include "AgentResults.h"
-#include "Agents.h"
-
 
 class Agents;
-class AgentAttributes;
-class AgentResults;
-
 
 class Agent {
 public:
-    Agent(std::string name, AgentAttributes  physiology, AgentAttributes  behaviour, const AgentResults &agentResults);
-    AgentAttributes getPhysiology();
-    AgentAttributes getBehaviour();
-    AgentResults getResults();
+    Agent(std::string &name, AgentAttributes physiology, AgentAttributes behaviour, const AgentResults &agentResults);
+    [[nodiscard]] AgentAttributes getPhysiology() const;  // Added const
+    [[nodiscard]] AgentAttributes getBehaviour() const;   // Added const
+    [[nodiscard]] AgentResults getResults() const;        // Added const
     void runTick(const Agents* agents);
 
 private:
@@ -30,7 +25,5 @@ private:
     AgentAttributes behaviour_m;
     AgentResults agentResults_m;
 };
-
-
 
 #endif //AGENT_H
