@@ -81,14 +81,6 @@ build CMakeFiles/Epydex.dir/src/AgentAttributes.cpp.obj: CXX_COMPILER__Epydex_un
   OBJECT_DIR = CMakeFiles\Epydex.dir
   OBJECT_FILE_DIR = CMakeFiles\Epydex.dir\src
 
-build CMakeFiles/Epydex.dir/src/Property.cpp.obj: CXX_COMPILER__Epydex_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Property.cpp || cmake_object_order_depends_target_Epydex
-  DEFINES = -DEpydex_EXPORTS
-  DEP_FILE = CMakeFiles\Epydex.dir\src\Property.cpp.obj.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include"
-  OBJECT_DIR = CMakeFiles\Epydex.dir
-  OBJECT_FILE_DIR = CMakeFiles\Epydex.dir\src
-
 build CMakeFiles/Epydex.dir/src/Event.cpp.obj: CXX_COMPILER__Epydex_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Event.cpp || cmake_object_order_depends_target_Epydex
   DEFINES = -DEpydex_EXPORTS
   DEP_FILE = CMakeFiles\Epydex.dir\src\Event.cpp.obj.d
@@ -137,7 +129,7 @@ build CMakeFiles/Epydex.dir/src/AgentGenerator.cpp.obj: CXX_COMPILER__Epydex_uns
 #############################################
 # Link the shared library libEpydex.dll
 
-build libEpydex.dll libEpydex.dll.a: CXX_SHARED_LIBRARY_LINKER__Epydex_Debug CMakeFiles/Epydex.dir/src/Model.cpp.obj CMakeFiles/Epydex.dir/src/Clock.cpp.obj CMakeFiles/Epydex.dir/src/Agents.cpp.obj CMakeFiles/Epydex.dir/src/AgentAttributes.cpp.obj CMakeFiles/Epydex.dir/src/Property.cpp.obj CMakeFiles/Epydex.dir/src/Event.cpp.obj CMakeFiles/Epydex.dir/src/Agent.cpp.obj CMakeFiles/Epydex.dir/src/AgentResults.cpp.obj CMakeFiles/Epydex.dir/src/MemoryMappedTable.cpp.obj CMakeFiles/Epydex.dir/src/AgentGenerator.cpp.obj
+build libEpydex.dll libEpydex.dll.a: CXX_SHARED_LIBRARY_LINKER__Epydex_Debug CMakeFiles/Epydex.dir/src/Model.cpp.obj CMakeFiles/Epydex.dir/src/Clock.cpp.obj CMakeFiles/Epydex.dir/src/Agents.cpp.obj CMakeFiles/Epydex.dir/src/AgentAttributes.cpp.obj CMakeFiles/Epydex.dir/src/Event.cpp.obj CMakeFiles/Epydex.dir/src/Agent.cpp.obj CMakeFiles/Epydex.dir/src/AgentResults.cpp.obj CMakeFiles/Epydex.dir/src/MemoryMappedTable.cpp.obj CMakeFiles/Epydex.dir/src/AgentGenerator.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Epydex.dir
@@ -199,13 +191,6 @@ build CMakeFiles/runTests.dir/src/AgentAttributes.cpp.obj: CXX_COMPILER__runTest
   OBJECT_DIR = CMakeFiles\runTests.dir
   OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
 
-build CMakeFiles/runTests.dir/src/Property.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Property.cpp || cmake_object_order_depends_target_runTests
-  DEP_FILE = CMakeFiles\runTests.dir\src\Property.cpp.obj.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  INCLUDES = -I"C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Users/v48305jm/System Files/PhD Computer Science/Code/Epydex/Epydex/cmake-build-debug/_deps/googletest-src/googletest"
-  OBJECT_DIR = CMakeFiles\runTests.dir
-  OBJECT_FILE_DIR = CMakeFiles\runTests.dir\src
-
 build CMakeFiles/runTests.dir/src/Event.cpp.obj: CXX_COMPILER__runTests_unscanned_Debug C$:/Users/v48305jm/System$ Files/PhD$ Computer$ Science/Code/Epydex/Epydex/src/Event.cpp || cmake_object_order_depends_target_runTests
   DEP_FILE = CMakeFiles\runTests.dir\src\Event.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
@@ -249,7 +234,7 @@ build CMakeFiles/runTests.dir/src/AgentGenerator.cpp.obj: CXX_COMPILER__runTests
 #############################################
 # Link the executable runTests.exe
 
-build runTests.exe runTests[1]_tests.cmake | ${cmake_ninja_workdir}runTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__runTests_Debug CMakeFiles/runTests.dir/tests/test_main.cpp.obj CMakeFiles/runTests.dir/tests/ClockTest.cpp.obj CMakeFiles/runTests.dir/src/Model.cpp.obj CMakeFiles/runTests.dir/src/Clock.cpp.obj CMakeFiles/runTests.dir/src/Agents.cpp.obj CMakeFiles/runTests.dir/src/AgentAttributes.cpp.obj CMakeFiles/runTests.dir/src/Property.cpp.obj CMakeFiles/runTests.dir/src/Event.cpp.obj CMakeFiles/runTests.dir/src/Agent.cpp.obj CMakeFiles/runTests.dir/src/AgentResults.cpp.obj CMakeFiles/runTests.dir/src/MemoryMappedTable.cpp.obj CMakeFiles/runTests.dir/src/AgentGenerator.cpp.obj | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+build runTests.exe runTests[1]_tests.cmake | ${cmake_ninja_workdir}runTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__runTests_Debug CMakeFiles/runTests.dir/tests/test_main.cpp.obj CMakeFiles/runTests.dir/tests/ClockTest.cpp.obj CMakeFiles/runTests.dir/src/Model.cpp.obj CMakeFiles/runTests.dir/src/Clock.cpp.obj CMakeFiles/runTests.dir/src/Agents.cpp.obj CMakeFiles/runTests.dir/src/AgentAttributes.cpp.obj CMakeFiles/runTests.dir/src/Event.cpp.obj CMakeFiles/runTests.dir/src/Agent.cpp.obj CMakeFiles/runTests.dir/src/AgentResults.cpp.obj CMakeFiles/runTests.dir/src/MemoryMappedTable.cpp.obj CMakeFiles/runTests.dir/src/AgentGenerator.cpp.obj | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
   FLAGS = -g
   LINK_LIBRARIES = lib/libgtest_maind.a  lib/libgtestd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\runTests.dir

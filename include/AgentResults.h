@@ -9,6 +9,7 @@
 #include <string>
 #include "AgentAttributes.h"
 #include "MemoryMappedTable.h"
+#include "Property.h"
 
 class AgentResults {
 public:

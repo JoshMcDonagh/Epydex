@@ -83,8 +83,7 @@
 				5,
 				6,
 				7,
-				8,
-				9
+				8
 			]
 		}
 	],
@@ -125,14 +124,14 @@
 				5,
 				6,
 				7,
-				8,
-				9
+				8
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
+				9,
 				10,
 				11,
 				12,
@@ -142,8 +141,7 @@
 				16,
 				17,
 				18,
-				19,
-				20
+				19
 			]
 		}
 	],
@@ -171,12 +169,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/AgentAttributes.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/Property.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

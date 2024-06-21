@@ -33,6 +33,8 @@ public:
     [[nodiscard]] int getNumOfProperties() const;
     [[nodiscard]] int getNumOfEvents() const;
     void runTick(const Agent* agent, const Agents* agents);
+    std::map<std::string, int> AgentAttributes::getPropertyIndexes();
+    std::map<std::string, int> AgentAttributes::getEventIndexes();
 
 private:
     int propertyCount_m;

@@ -12,7 +12,6 @@ add_library(Epydex SHARED
         src/clock.cpp
         src/agents.cpp
         src/AgentAttributes.cpp
-        src/Property.cpp
         src/Event.cpp
         src/Agent.cpp
         src/AgentResults.cpp
@@ -67,7 +66,6 @@ add_executable(
         src/clock.cpp
         src/agents.cpp
         src/AgentAttributes.cpp
-        src/Property.cpp
         src/Event.cpp
         src/Agent.cpp
         src/AgentResults.cpp
